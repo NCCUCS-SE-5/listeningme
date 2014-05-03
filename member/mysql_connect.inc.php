@@ -4,11 +4,11 @@
 //資料庫位置
 $db_server = "localhost";
 //資料庫名稱
-$db_name   = "se";
+$db_name   = "listen";
 //資料庫管理者帳號
-$db_user   = "db_user";
+$db_user   = "admin";
 //資料庫管理者密碼
-$db_passwd = "db_passwd";
+$db_passwd = "admin";
 
 //對資料庫連線
 if (!@mysql_connect($db_server, $db_user, $db_passwd))
