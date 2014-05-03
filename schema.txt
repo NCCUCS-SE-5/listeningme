@@ -1,0 +1,25 @@
+-- 
+-- 資料庫: `listen`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `member_table`
+-- 
+
+CREATE TABLE `member_table` (
+  `no` int(11) NOT NULL auto_increment,
+  `account_number` tinytext collate utf8_unicode_ci NOT NULL,
+  `password` tinytext collate utf8_unicode_ci NOT NULL,
+  `full_name` tinytext collate utf8_unicode_ci NOT NULL,
+  `sex` varchar(1) collate utf8_unicode_ci NOT NULL,
+  `birthday` date NOT NULL,
+  `telephone` tinytext collate utf8_unicode_ci NOT NULL,
+  `mobile` tinytext collate utf8_unicode_ci NOT NULL,
+  `address` tinytext collate utf8_unicode_ci NOT NULL,
+  `email` tinytext collate utf8_unicode_ci NOT NULL,
+  `profession` tinytext collate utf8_unicode_ci NOT NULL,
+  `other` tinytext collate utf8_unicode_ci NOT NULL,
+  PRIMARY KEY  (`no`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
