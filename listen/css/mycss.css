@@ -1,0 +1,59 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	font-family: "微軟正黑體","Microsoft JhengHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+	background-color: #eee;
+}
+
+section {
+	margin-top:71px;
+}
+
+.title {
+	font-size: 4em;
+	text-align: center;
+	font-weight: 700;
+}
+
+.phpmessage {
+	font-size: 2em;
+	text-align: center;
+	margin-top: 150px;
+}
+
+.messagecard {
+	border: 1px solid;
+	border-radius: 5px;
+	background-image: url("../images/card.png");
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.messagetitle {
+	padding:5px;
+}
+
+.messagename{
+	padding:5px;
+}
+
+.messageemail{
+	padding:5px;
+}
+
+.messagetime{
+	padding:5px;
+}
+
+.messageconten{
+	padding:5px;
+}
+
+footer {
+	width: 90%;
+	text-align: center;
+	margin: 50px auto;
+	padding-top: 10px;
+	border-top: 1px gray solid;
+}
