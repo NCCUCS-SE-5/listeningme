@@ -10,10 +10,29 @@ section {
 	margin-top:71px;
 }
 
+.icon {
+	margin-left: 10px;
+	margin-right: 10px !important;
+	margin-top: 5px;
+}
+
+.h{
+	color: #e74c3c;
+}
+
+.h:hover{
+	color: #c0392b;
+}
+
 .title {
 	font-size: 4em;
 	text-align: center;
 	font-weight: 700;
+}
+
+.search {
+	margin-top:20px;
+	margin-bottom: 20px;
 }
 
 .phpmessage {

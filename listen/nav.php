@@ -12,7 +12,7 @@
 		      <li><a href='message.php'>留言板</a></li>
 		      <li><a href='plan.php'>福利規劃</a></li>
 		    </ul>
-		    <ul class='nav navbar-nav navbar-right'>
+        <ul class='nav navbar-nav navbar-right'>
         "
         .
           (($_SESSION['account_number'] == null)?
@@ -20,6 +20,9 @@
             "<li><a href='logout.php'>登出</a></li>")
         .
         "
+        </ul>
+        <ul class='nav navbar-nav navbar-right icon'>
+          <a href='https://github.com/NCCUCS-SE-5/listeningme' class='h' target='_blank'><i class='fa fa-github-square fa-2x'></i></a>       
         </ul>
 	    </div>
 	  </div>
