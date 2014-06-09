@@ -17,16 +17,16 @@
 		</div>
 		<div class="grid_12">
 			<?php
-		    $sql = "SELECT * FROM  `selisteningme` LIMIT 0 , 30";
+		    $sql = "SELECT id,_id,title,location,max_content,max_type FROM  `selisteningme` LIMIT 0 , 30";
 				$result = mysql_query($sql) or die('MySQL query error');
 				echo "<table class='table'>";
 				echo "<tr><td>名稱</td><td>地區</td><td>最大金額</td><td>單位</td></tr>";
 				// 顯示欄位資訊
-				while ( $row = mysql_fetch_array($result) ) {
-					echo "<tr><td>" .$row[9]. "</td>";
-					echo "<td>" .$row[5]. "</td>";
-					echo "<td>" .$row[6]. "</td>";
-					echo "<td>" .$row[7]. "</td></tr>";
+				while ( list($id,$_id,$title,$location,$max_content,$max_type) = mysql_fetch_array($result) ) {
+					echo "<tr><td><a href='setalbeview.php?id= $id'>" .$title. "</td>";
+					echo "<td>" .$location. "</td>";
+					echo "<td>" .$max_content. "</td>";
+					echo "<td>" .$max_type. "</td></tr>";
 				}
 				echo "</table>";
 				mysql_free_result($result); // 釋放佔用的記憶體

@@ -7,6 +7,8 @@
 	<script type='text/javascript' src='js/bootstrap.min.js'></script>
 	<!-- grid960 -->
 	<link rel='stylesheet' type='text/css' href='css/960_12_col.css'>
+	<!-- Icon font -->
+	<link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
 	<!-- mycss -->
 	<link rel='stylesheet' type='text/css' href='css/mycss.css'>
 	";
