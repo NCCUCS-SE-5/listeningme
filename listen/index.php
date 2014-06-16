@@ -15,10 +15,14 @@
 		<div class="grid_12 title">
 			福利請聽
 		</div>
-		<div class="grid_12">
+		<div class="grid_12 panel panel-default">
+  			<div class="panel-body" style="min-height: 500px">
+  			<?php include "searchbar.php" ?>
 			<?php
-		    $sql = "SELECT id,_id,title,location,max_content,max_type FROM  `selisteningme` LIMIT 0 , 30";
+
+		    	$sql = "SELECT id,_id,title,location,max_content,max_type FROM  `selisteningme` LIMIT 0 , 30";
 				$result = mysql_query($sql) or die('MySQL query error');
+				echo "<div id='result' style='display:none'>";
 				echo "<table class='table'>";
 				echo "<tr><td>名稱</td><td>地區</td><td>最大金額</td><td>單位</td></tr>";
 				// 顯示欄位資訊
@@ -28,9 +32,11 @@
 					echo "<td>" .$max_content. "</td>";
 					echo "<td>" .$max_type. "</td></tr>";
 				}
-				echo "</table>";
+				echo "</table></div>";
 				mysql_free_result($result); // 釋放佔用的記憶體
+
 			?>
+			</div>
 		</div>
 	</section>
 	<?php include 'footer.php'; ?>
