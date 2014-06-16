@@ -3,7 +3,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
   display: block; }
 
 a {
-  color: #d33682;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
@@ -19,11 +18,9 @@ figure {
 h1 {
   font-size: 30px;
   margin-bottom: 10px;
-  text-transform: uppercase;
-  color: #d33682; }
+  text-transform: uppercase; }
 
 h2 {
-  color: #b58900;
   font-weight: normal;
   margin-bottom: 10px; }
 
@@ -41,7 +38,6 @@ pre {
   position: relative;
   overflow: auto;
   background: #002b36;
-  color: #93a1a1;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 10px inset;
   padding: 20px;
   font-size: 14px;
