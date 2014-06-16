@@ -1,12 +1,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php 
+<?php
 	$db_server = "localhost";
 	//資料庫名稱
 	$db_name   = "listen";
 	//資料庫管理者帳號
-	$db_user   = "admin";
+	$db_user   = "root";
 	//資料庫管理者密碼
-	$db_passwd = "admin";
+	$db_passwd = "j28585556A22785";
 
 	//對資料庫連線
 	if (!@mysql_connect($db_server, $db_user, $db_passwd))
