@@ -12,11 +12,8 @@
 <body>
 	<?php include 'nav.php'; ?>
 	<section class="container_12">
-		<div class="grid_12 title">
-			留言板
-		</div>
 		<div class="grid_12" style="text-align:center;">
-			<a href="newmessage.php"><button class="btn btn-success btn-lg">留言</button></a>
+			<a href="newmessage.php"><button class="btn btn-danger btn-lg">留言</button></a>
 		</div>
 		<?php
 			/* 查詢欄位資料 */
@@ -26,11 +23,11 @@
 			while (list($no,$name,$mail,$subject,$content,$putdate)=mysql_fetch_row($result))
 			{
 				echo "<div class='messagecard grid_8 push_2'>";
-				echo "<div class='messagetitle'>留言主題:".$subject."</div>";
-				echo "<div class='messagename'>姓名:".$name."</div>";
-				echo "<div class='messageemail'>E-mail:<a href=mailto:$mail>".$mail."</a>"."</div>";
-				echo "<div class='messagetime'>留言時間:".$putdate."</div>";
-				echo "<div class='messageconten'>留言內容:".nl2br($content)."</div>";
+				echo "<div class='messagetitle'>留言主題: ".$subject."</div>";
+				echo "<div class='messagename'>姓名: ".$name."</div>";
+				echo "<div class='messageemail'>E-mail: <a href=mailto:$mail>".$mail."</a>"."</div>";
+				echo "<div class='messagetime'>留言時間: ".$putdate."</div>";
+				echo "<div class='messageconten'>留言內容: ".nl2br($content)."</div>";
 				echo "</div>";
 			}
 		?>
