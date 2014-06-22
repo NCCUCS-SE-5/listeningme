@@ -2,20 +2,13 @@
     session_start();
     include 'connect.php';
 ?>
-
-<div class="tabbable" id "search-block">
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#pane1" data-toggle="tab">關鍵字搜尋</a></li>
-        <li><a href="#pane2" data-toggle="tab">分類搜尋</a></li>
-    </ul>
-    <div class="tab-content">
-        <div id="pane1" class="tab-pane active">
+        <div id="pane1" class="tab-pane active fade in">
             <form class="form-wrapper cf" id="search-by-keyword-form" style="width: 470px" method="GET">
                 <input type="text" id="keyword" name="keyword" placeholder=" 請輸入關鍵字..." required>
                 <button class="btn-search" id="search-by-keyword-btn" type="submit">搜尋</button>
             </form>
         </div>
-        <div id="pane2" class="tab-pane">
+        <div id="pane2" class="tab-pane fade">
             <form class="form-wrapper cf" id="search-by-category-form" style="width: 380px">
                 <div class="input-control select place-left">
                     <select style="border-radius: 7px 0 0 7px;">
@@ -55,8 +48,6 @@
                 <button class="btn-select" id="search-by-category-btn" type="submit">搜尋</button>
             </form>
         </div>
-    </div><!-- /.tab-content -->
-</div><!-- /.tabbable -->
 
 <script>
 

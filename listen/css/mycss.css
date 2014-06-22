@@ -1,9 +1,10 @@
 body {
 	padding: 0;
 	margin: 0;
-	font-size: 20px;
+	font-size: 18px;
 	font-family: "微軟正黑體","Microsoft JhengHei","Helvetica Neue",Helvetica,Arial,sans-serif;
-	background-color: #FAFAD2;
+	/*background-color: #FAFAD2;*/
+    background-color: #FFFFD7;
 }
 
 section {
@@ -23,13 +24,21 @@ section {
 .h:hover{
 	color: #c0392b;
 }
-
+/*
+.a{
+    padding-top: 10px;
+}
+*/
 .title {
 	font-size: 4em;
 	text-align: center;
 	font-weight: 700;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+small, .small {
+    font-size: 15px !important;
 }
 
 .search {
@@ -70,8 +79,9 @@ section {
 .messageconten{
 	padding:5px;
 }
+
 .navbar-collapse{
-	height: 40px !important;
+	height: 60px !important;
 }
 .navbar-inner{
 	font-size: 16px;
@@ -94,7 +104,7 @@ section {
 }
 
 .navbar-inner .navbar-nav > li > a{
-	color: black;
+	color: #5F5F5F;
 }
 
 .navbar-inner .navbar-nav > li > a:hover{
@@ -105,9 +115,27 @@ section {
 label{
     font-size: 16px;
 }
+.nav-pills{
+    padding-bottom: 20px;
+}
 
-.nav-tabs > li > a{
+.nav-pills > li > a:hover{
+    background-color: #FFDD97;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+    color: white;
+    background-color: #FFC858;
+}
+
+.nav-pills > li.active > a:hover {
+    color: white;
+    background-color: #FFD37B;
+}
+
+.nav-pills > li > a{
 	font-size: 16px;
+    color: #5F5F5F;
 }
 
 .panel-heading{
@@ -139,28 +167,30 @@ label{
 
 .form-wrapper input {
     width: 330px;
-    height: 40px;
+    height: 60px;
     padding: 10px 5px;
     float: left;
     font: bold 15px '微軟正黑體', 'lucida sans', 'trebuchet MS', 'Tahoma';
     border: 0;
-    background: #eee;
+    background: #eeeeee;
     -moz-border-radius: 0 0 0 0;
     -webkit-border-radius: 0 0 0 0;
     border-radius: 7px 0 0 7px;
+    font-size: 20px;
 }
 
 .form-wrapper select {
     width: 120px !important;
-    height: 40px;
+    height: 60px;
     padding: 10px 5px;
     float: left;
     font: bold 15px '微軟正黑體', 'lucida sans', 'trebuchet MS', 'Tahoma';
     border: 0;
-    background: #eee;
+    background: #eeeeee;
     -moz-border-radius: 0 0 0 0;
     -webkit-border-radius: 0 0 0 0;
     border-radius: 0 0 0 0;
+    font-size: 20px;
 }
 
 .form-wrapper input:focus {
@@ -193,12 +223,13 @@ label{
     border: 0;
     padding: 0;
     cursor: pointer;
-    height: 40px;
+    height: 60px;
     width: 110px;
     font: 18px '微軟正黑體', 'lucida sans', 'trebuchet MS', 'Tahoma';
     color: #fff;
     background: #d83c3c;
     text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+    font-size: 20px;
 }
 
 .form-wrapper .btn-search {
@@ -225,7 +256,7 @@ label{
 .form-wrapper button:before {
     content: '';
     position: absolute;
-    border-width: 8px 8px 8px 0;
+    border-width: 20px 15px 20px 0;
     border-color: transparent #d83c3c transparent;
     top: 12px;
     left: -6px;

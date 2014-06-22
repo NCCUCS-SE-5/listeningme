@@ -137,7 +137,7 @@
 							document.getElementById('captcha').src='captcha.php?'+Math.random();
 							document.getElementById('captcha-form').focus();"
 							id="change-image">換一組驗證碼</a><br/><br/>
-						<input type="text" name="captcha" id="captcha-form" autocomplete="off" /><br/>
+						<input type="text" class="form-control pull-left" name="captcha" id="captcha-form" autocomplete="off" /><br/>
 						</div>
 					</div>
 					<div class="form-group">
