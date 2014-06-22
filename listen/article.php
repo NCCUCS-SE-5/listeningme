@@ -12,13 +12,14 @@
 <body>
 	<?php include 'nav.php'; ?>
 	<section class="container_12" style="padding-top: 40px">
-		<div>
+		<div class="grid_12">
 			<?php
-				if($_SESSION['account_number']!=null)
-					echo "<a href='newarticle.php'><button class='btn btn-default btn-lg'>新增文章</button></a>";
+				//if($_SESSION['account_number']!=null)
+					echo "<a href='newarticle.php'><button class='btn btn-default pull-right'>新增文章</button></a>";
 			?>
 		</div>
-		<div>
+		<br /><br />
+		<div class="grid_12">
 			<?php
 			$DISSCUSS_TBL="disscuss"; // 發表文章用資料庫
 			$RE_DISSCUSS_TBL="re_disscuss"; // 回覆文章用資料庫
@@ -49,7 +50,7 @@
 				$precontent=substr(wordwrap($content, 65, "<br />", true), 0, 195);
 
 				//echo "<tr><td><a href='view.php?serial=$serial'>$title</a></td><td>$time</td><td><a href='mailto:$email'>$name</a></td><td>$count</td></tr>";
-				echo "<div class='grid_12 panel panel-default'><div class='panel-body'>".
+				echo "<div class='panel panel-default'><div class='panel-body'>".
 						"<div><strong><a href='view.php?serial=$serial' style='font-size: 24px'>$title</a></strong><small class='pull-right' style='color: gray'>作者：$name  瀏覽人數：$count</small></div>".
 						"<br /><hr/>".
 						"<div>$precontent</div>".
