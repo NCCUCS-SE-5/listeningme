@@ -2,61 +2,52 @@
     session_start();
     include 'connect.php';
 ?>
-
-<div class="tabbable" id "search-block">
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#pane1" data-toggle="tab">關鍵字搜尋</a></li>
-        <li><a href="#pane2" data-toggle="tab">分類搜尋</a></li>
-    </ul>
-    <div class="tab-content">
-        <div id="pane1" class="tab-pane active">
-            <form class="form-wrapper cf" id="search-by-keyword-form" style="width: 470px" method="GET">
-                <input type="text" id="keyword" name="keyword" placeholder=" 請輸入關鍵字..." required>
-                <button class="btn-search" id="search-by-keyword-btn" type="submit">搜尋</button>
-            </form>
+<div id="pane1" class="tab-pane active fade in">
+    <form class="form-wrapper cf" id="search-by-keyword-form" style="width: 470px" method="GET">
+        <input type="text" id="keyword" name="keyword" placeholder=" 請輸入關鍵字..." required>
+        <button class="btn-search" id="search-by-keyword-btn" type="submit">搜尋</button>
+    </form>
+</div>
+<div id="pane2" class="tab-pane fade">
+    <form class="form-wrapper cf" id="search-by-category-form" style="width: 380px">
+        <div class="input-control select place-left">
+            <select style="border-radius: 7px 0 0 7px;">
+                <option value="" disabled selected>地區</option>
+                <option>基隆市</option>
+                <option>台北市</option>
+                <option>新北市</option>
+                <option>桃園縣</option>
+                <option>新竹市</option>
+                <option>新竹縣</option>
+                <option>苗栗縣</option>
+                <option>臺中市</option>
+                <option>彰化縣</option>
+                <option>南投縣</option>
+                <option>雲林縣</option>
+                <option>嘉義市</option>
+                <option>嘉義縣</option>
+                <option>臺南市</option>
+                <option>高雄市</option>
+                <option>屏東縣</option>
+                <option>宜蘭縣</option>
+                <option>花蓮縣</option>
+                <option>臺東縣</option>
+                <option>澎湖縣</option>
+                <option>金門縣</option>
+                <option>連江縣</option>
+            </select>
         </div>
-        <div id="pane2" class="tab-pane">
-            <form class="form-wrapper cf" id="search-by-category-form" style="width: 380px">
-                <div class="input-control select place-left">
-                    <select style="border-radius: 7px 0 0 7px;">
-                        <option value="" disabled selected>地區</option>
-                        <option>基隆市</option>
-                        <option>台北市</option>
-                        <option>新北市</option>
-                        <option>桃園縣</option>
-                        <option>新竹市</option>
-                        <option>新竹縣</option>
-                        <option>苗栗縣</option>
-                        <option>臺中市</option>
-                        <option>彰化縣</option>
-                        <option>南投縣</option>
-                        <option>雲林縣</option>
-                        <option>嘉義市</option>
-                        <option>嘉義縣</option>
-                        <option>臺南市</option>
-                        <option>高雄市</option>
-                        <option>屏東縣</option>
-                        <option>宜蘭縣</option>
-                        <option>花蓮縣</option>
-                        <option>臺東縣</option>
-                        <option>澎湖縣</option>
-                        <option>金門縣</option>
-                        <option>連江縣</option>
-                    </select>
-                </div>
-                <div class="input-control select place-left">
-                    <select>
-                        <option value="" disabled selected>身分</option>
-                        <option>老人</option>
-                        <option>身障</option>
-                        <option>單親</option>
-                    </select>
-                </div>
-                <button class="btn-select" id="search-by-category-btn" type="submit">搜尋</button>
-            </form>
+        <div class="input-control select place-left">
+            <select>
+                <option value="" disabled selected>身分</option>
+                <option>老人</option>
+                <option>身障</option>
+                <option>單親</option>
+            </select>
         </div>
-    </div><!-- /.tab-content -->
-</div><!-- /.tabbable -->
+        <button class="btn-select" id="search-by-category-btn" type="submit">搜尋</button>
+    </form>
+</div>
 
 <script>
 

@@ -10,16 +10,39 @@
 </head>
 <body>
 	<?php include 'nav.php'; ?>
-	<section class="container_12">
-		<div class="grid_12">
-			<form action="addarticle.php" method="post" id="add_form" >
-				<table class="table">
-				<tr><td nowrap>姓名</td><td><input type="text" name="name"  style="width: 150;" id="name" value=<?php echo $_SESSION['account_number'] ?> disabled></td></tr>
-				<tr><td nowrap>電子郵件</td><td><input type="text" name="email"  style="width: 350;" id="email"></td></tr>
-				<tr><td nowrap>討論主題</td><td><input type="text" name="title"  style="width: 350;" id="title"></td></tr>
-				<tr><td nowrap>主題內容</td><td><textarea cols="" rows="6" name="content" style="width: 350;" id="content"></textarea></td></tr>
-				<tr><td><button class="btn btn-success btn-lg" type="submit">送出文章</button></td></tr>
-			</table>
+	<section class="container_12" style="padding-top: 20px">
+		<div class="grid_12 prefix_3">
+			<form class="form-horizontal" action="addarticle.php" method="post" id="add_form" >
+				<div class='form-group'>
+					<label class="col-md-2 col-lg-2 control-label">姓名：</label>
+					<div class="col-md-10 col-lg-10">
+						<input class="form-control" type="text" name="name" id="name" style="width:150px">
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class="col-md-2 col-lg-2 control-label">電子郵件：</label>
+					<div class="col-md-10 col-lg-10">
+						<input class="form-control" type="text" name="email" id="email" style="width:350px">
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class="col-md-2 col-lg-2 control-label">討論主題：</label>
+					<div class="col-md-10 col-lg-10">
+						<input class="form-control" type="text" name="email" id="email" style="width:450px">
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class="col-md-2 col-lg-2 control-label">主題內容：</label>
+					<div class="col-md-10 col-lg-10">
+						<textarea class="form-control" cols="100" rows="13" name="content" style="width: 450px" id="content"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-lg-offset-2 col-md-offset-2 col-lg-10 col-md-10">
+						<button class="btn btn-success" type="submit">送出文章</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</section>
 	<?php include 'footer.php'; ?>
