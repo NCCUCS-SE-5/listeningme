@@ -11,7 +11,7 @@
 </head>
 <body>
 	<?php include 'nav.php'; ?>
-	<section class="container_12">
+	<section class="container_12" style="padding-top: 40px">
 		<div class="grid_12">
 			<?php
 				$DISSCUSS_TBL="disscuss"; // 發表文章用資料庫
@@ -24,39 +24,53 @@
 				$list =mysql_query($str);
 				list($time,$title,$content,$count,$name,$email,$web,$ip) = mysql_fetch_row($list);
 			?>
+			<div class="panel panel-default">
+				<div class="panel-body">
 
-		<table class="table">
-			<tr><td><?php echo $title; ?></td></tr>
-			<tr><td>【發佈人】：<a href="mailto:<?php echo $email;?>"><?php echo $name;?></a></td></tr>
-			<tr><td>【發佈時間】：<?php echo $time;?>【瀏覽人數】：<?php echo $count;?></td></tr>
-			<tr><td><?php echo $content;?></td></tr>
-		</table>
-			<form action="replyarticle.php" method="post" style="text-align:center;">
-				<input type="hidden" name="serial" value="<?php echo $serial;?>">
-				<input type="hidden" name="title" value="<?php echo $title;?>">
-				<?php
-					if($_SESSION['account_number']!=null)
-						echo '<button class="btn btn-success" type="submit">回覆本文</button>';
-				?>
-			</form>
+					<strong><a href="view.php?serial=<?php echo $serial?>" style="font-size: 24px"><?php echo $title?></a></strong>
 
-			<?php re_post($serial); ?>
+					<hr />
+					<small class="pull-right" style="color: gray">作者：<?php echo $name?>　瀏覽人數：<?php echo $count?></small>
+					<div>
+						<?php echo $content ?>
+					</div>
+					<br /><hr />
+					<form action="replyarticle.php" method="post" style="text-align:center;">
+						<input type="hidden" name="serial" value="<?php echo $serial;?>">
+						<input type="hidden" name="title" value="<?php echo $title;?>">
+						<?php
+							if($_SESSION['account_number']!=null)
+								echo '<button class="btn btn-success" type="submit">回覆本文</button>';
+						?>
+					</form>
+					<?php re_post($serial); ?>
+
+					<?php
+					function re_post($serial){
+						global $close_html,$link,$RE_DISSCUSS_TBL;
+						$str="select * from $RE_DISSCUSS_TBL where re_serial = '$serial'";
+						$list =mysql_query($str);
+						while(list($re_serial,$re_time,$re_title,$re_content,$re_count,$re_name,$re_email,$re_web,$re_ip) = mysql_fetch_row($list)){
+							echo "
+							<div class='well'>
+								<small>【回覆人】：<a href='mailto:".$re_email."'>".$re_name."</a></small>
+								<small>【回覆時間】：".$re_time."</small><br /><br />
+								<div>".$re_content."</div>
+							</div><br />
+							";
+						}
+					}
+					?>
+				</div>
+			</div>
 
 			<?php
-			function re_post($serial){
-				global $close_html,$link,$RE_DISSCUSS_TBL;
-				$str="select * from $RE_DISSCUSS_TBL where re_serial = '$serial'";	
-				$list =mysql_query($str);
-				while(list($re_serial,$re_time,$re_title,$re_content,$re_count,$re_name,$re_email,$re_web,$re_ip) = mysql_fetch_row($list)){
-					echo "
-					<table class='table'>
-						<tr><td>【回覆人】：<a href='mailto:".$re_email."'>".$re_name."</a></td></tr>
-						<tr><td>【回覆時間】：".$re_time."</td></tr>
-						<tr><td>".$re_content."</td></tr>
-					</table></br>
-					";
-				}
-			}
+				/*echo "<div class='grid_12 panel panel-default'><div class='panel-body'>".
+						"<div><strong><a href='view.php?serial=$serial' style='font-size: 24px'>$title</a></strong><small class='pull-right' style='color: gray'>作者：$name  瀏覽人數：$count</small></div>".
+						"<hr/>".
+						"<div>$content</div>".
+						"</div></div>";
+				*/
 			?>
 		</div>
 	</section>

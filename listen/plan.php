@@ -1,8 +1,8 @@
 <?php
 	session_start();
 	include 'connect.php';
-	require('lib/gantti.php'); 
-	require('myData.php'); 
+	require('lib/gantti.php');
+	require('myData.php');
 
 	date_default_timezone_set('Asia/Taipei');
 	setlocale(LC_ALL, 'zh_TW');
@@ -26,9 +26,6 @@
 <body>
 	<?php include 'nav.php'; ?>
 	<section class="container_12">
-		<div class="grid_12 title">
-			福利規劃
-		</div>
 		<div class="grid_12">
 			<p>
 				圖表顏色說明：
